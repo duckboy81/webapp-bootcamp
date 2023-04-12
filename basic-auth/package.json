@@ -1,0 +1,9 @@
+{
+  "name": "basic-auth",
+  "dependencies": {
+    "http-auth": "^4.2.0"
+  },
+  "scripts": {
+    "start": "node ./server.js"
+  }
+}

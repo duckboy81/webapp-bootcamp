@@ -4,16 +4,7 @@
   "description": "Random examples to assist with teach the webapp-bootcamp",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/duckboy81/webapp-bootcamp"
-  },
-  "scripts": {
-    "start:basic-auth": "./basic-auth/server.js"
-  },
-  "dependencies": {
-    "body-parse": "^0.1.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "rootpath": "^0.1.2"
+    "type": "git",
+    "url": "https://github.com/duckboy81/webapp-bootcamp"
   }
 }
