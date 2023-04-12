@@ -6,5 +6,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/duckboy81/webapp-bootcamp"
-  }
+  },
+  "scripts": {
+    "start:basic-auth": "npm -w basic-auth run start"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
