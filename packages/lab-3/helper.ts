@@ -121,21 +121,21 @@ function getHandRank(hand: Hand): HandRank {
     }
 }
 
-function hasPair(hand: Hand): HighestCardResult {
+export function hasPair(hand: Hand): HighestCardResult {
     const nOfAKinds = getAllNOfAKinds(hand, 2);
     return nOfAKinds?.[0] ?? null;
 }
 
-function hasTwoPair(hand: Hand): HighestCardResult {
+export function hasTwoPair(hand: Hand): HighestCardResult {
     const nOfAKinds = getAllNOfAKinds(hand, 2);
     return (nOfAKinds?.length === 2) ? nOfAKinds[0] : null;
 }
-function hasNOfAKind(hand: Hand, n: number): HighestCardResult {
+export function hasNOfAKind(hand: Hand, n: number): HighestCardResult {
     const nOfAKinds = getAllNOfAKinds(hand, n);
     return nOfAKinds?.[0] ?? null;
 }
 
-function hasFullHouse(hand: Hand): HighestCardResult {
+export function hasFullHouse(hand: Hand): HighestCardResult {
     // Check for a three of a kind
     const hasThreeOfAKindResult = hasNOfAKind(hand, 3);
 
@@ -144,7 +144,7 @@ function hasFullHouse(hand: Hand): HighestCardResult {
 
     return (hasThreeOfAKindResult !== null && hasPairResult !== null) ? Math.max(hasThreeOfAKindResult, hasPairResult) : null;
 }
-function getAllNOfAKinds(hand: Hand, n: number): number[] | null {
+export function getAllNOfAKinds(hand: Hand, n: number): number[] | null {
 
     const nOfAKinds = new Set<number>();
 
@@ -167,19 +167,19 @@ function getAllNOfAKinds(hand: Hand, n: number): number[] | null {
     return (nOfAKinds.size) ? [...nOfAKinds].sort((a,b) => b-a) : null;
 }
 
-function hasStraight(hand: Hand): HighestCardResult {
+export function hasStraight(hand: Hand): HighestCardResult {
 
     const startCardValue = hand[0].value;
 
     // Loop through the cards, they must go in descending order
-    for (let i=0; i<4; i++) {
-        if (hand[i].value !== startCardValue - (i + 1)) return null;
+    for (let i=0; i<5; i++) {
+        if (hand[i].value !== startCardValue - i) return null;
     }
 
     return startCardValue;
 }
 
-function hasFlush(hand: Hand): HighestCardResult {
+export function hasFlush(hand: Hand): HighestCardResult {
     // Determine if there is a flush
     let suit: Suits = hand[0].suit;
     const hasMismatchSuit = hand.some(card => suit !== card.suit);
@@ -187,7 +187,7 @@ function hasFlush(hand: Hand): HighestCardResult {
     return (!hasMismatchSuit) ? hand[0].value : null;
 }
 
-function hasStraightFlush(hand: Hand): HighestCardResult {
+export function hasStraightFlush(hand: Hand): HighestCardResult {
     // Ensure there is a straight
     const highestCardResult = hasStraight(hand);
     if (highestCardResult === null) return null;
@@ -195,10 +195,10 @@ function hasStraightFlush(hand: Hand): HighestCardResult {
     // Determine if there is a flush
     const hasFlushResult = hasFlush(hand);
 
-    return (!hasFlushResult) ? highestCardResult : null;
+    return (hasFlushResult) ? highestCardResult : null;
 }
 
-function hasRoyalFlush(hand: Hand): HighestCardResult {
+export function hasRoyalFlush(hand: Hand): HighestCardResult {
 
     // Check if there is a straight flush
     const highestCardResult = hasStraightFlush(hand);

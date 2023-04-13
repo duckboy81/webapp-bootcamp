@@ -5,7 +5,8 @@
   "main": "faster-than-benn.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./faster-than-benn.ts",
+    "start": "nodemon ./faster-than-ben.ts",
+    "start:test": "nodemon ./test.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

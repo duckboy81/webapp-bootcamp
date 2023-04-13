@@ -53,4 +53,4 @@ const playerOneWins = games.filter(hands => {
 
 // Share the results
 console.log(`Player one wins ${playerOneWins.length} hands`);
-console.log(`Player one wins ${games.length - playerOneWins.length} hands`);
+console.log(`Player two wins ${games.length - playerOneWins.length} hands`);
