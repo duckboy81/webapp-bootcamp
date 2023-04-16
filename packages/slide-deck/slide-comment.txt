@@ -1,0 +1,1 @@
+@duckboy81/webapp-bootcamp/packages/slide-deck/***.js
