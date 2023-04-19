@@ -1,6 +1,7 @@
 // Check for a royal flush
 import { hasRoyalFlush } from "./helper.js";
 import { FaceValues, Suits } from "./types.js";
+
 let test;
 test = hasRoyalFlush([
     {

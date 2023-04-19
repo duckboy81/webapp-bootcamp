@@ -5,6 +5,7 @@ export var Suits;
     Suits["SPADES"] = "S";
     Suits["CLUBS"] = "C";
 })(Suits = Suits || (Suits = {}));
+
 export var FaceValues;
 (function (FaceValues) {
     FaceValues[FaceValues["T"] = 10] = "T";
@@ -13,6 +14,7 @@ export var FaceValues;
     FaceValues[FaceValues["K"] = 13] = "K";
     FaceValues[FaceValues["A"] = 14] = "A";
 })(FaceValues = FaceValues || (FaceValues = {}));
+
 export var HandRankings;
 (function (HandRankings) {
     HandRankings[HandRankings["HighCard"] = 1] = "HighCard";
