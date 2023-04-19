@@ -7,6 +7,7 @@
   "scripts": {
     "start": "nodemon ./faster-than-ben.ts",
     "start:test": "nodemon ./test.ts",
+    "emit-js": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
