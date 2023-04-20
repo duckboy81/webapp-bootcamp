@@ -1,58 +1,72 @@
 // Check for a royal flush
-import {getAllNOfAKinds, hasRoyalFlush} from "./helper.js";
+import { getAllNOfAKinds, hasFullHouse, hasRoyalFlush } from "./helper.js";
 import { FaceValues, Suits } from "./types.js";
-
-console.log(
-    hasRoyalFlush([
-        {
-            value: FaceValues.A,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.K,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.Q,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.J,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.T,
-            suit: Suits.CLUBS,
-        },
-    ])
-);
-
-console.log(
-    getAllNOfAKinds([
-        {
-            value: FaceValues.Q,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.Q,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.K,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.K,
-            suit: Suits.CLUBS,
-        },
-        {
-            value: FaceValues.K,
-            suit: Suits.CLUBS,
-        },
-    ])
-);
-
-
+const result1 = hasRoyalFlush([
+    {
+        value: FaceValues.A,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.Q,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.J,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.T,
+        suit: Suits.CLUBS,
+    },
+]);
+const result2 = getAllNOfAKinds([
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.A,
+        suit: Suits.CLUBS,
+    },
+], 2);
+const result3 = hasFullHouse([
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+]);
 console.log('done');
 //
 // // Check for a four of a kind

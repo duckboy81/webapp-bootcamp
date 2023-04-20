@@ -1,0 +1,16 @@
+{
+  "name": "lab-3-solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "faster-than-benn.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./faster-than-ben.js",
+    "start:test": "nodemon ./test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

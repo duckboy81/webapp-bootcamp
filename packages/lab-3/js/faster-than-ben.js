@@ -4,6 +4,7 @@ import { getNumberFromValue, isWinnerPlayerOne } from "./helper.js";
 
 // Break out the rawHands
 const games = rawHands.map(twoHands => {
+
     const cardStrings = twoHands.split(" ");
     const handDetails = [];
 
@@ -33,7 +34,6 @@ const games = rawHands.map(twoHands => {
         handDetails[i]["hand"].sort((a, b) => {
             return b.value - a.value;
         });
-
     }
 
     const hands = {
