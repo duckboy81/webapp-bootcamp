@@ -1,5 +1,6 @@
 // Check for a royal flush
 import {
+    getAllNOfAKinds,
     hasFlush,
     hasFullHouse,
     hasNOfAKind,
@@ -11,9 +12,7 @@ import {
 } from "./helper.js";
 import {FaceValues, Suits} from "./types.js";
 
-let test;
-
-test = hasRoyalFlush([
+const result1 = hasRoyalFlush([
     {
         value: FaceValues.A,
         suit: Suits.CLUBS,
@@ -32,6 +31,52 @@ test = hasRoyalFlush([
     },
     {
         value: FaceValues.T,
+        suit: Suits.CLUBS,
+    },
+]);
+
+const result2 = getAllNOfAKinds([
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.A,
+        suit: Suits.CLUBS,
+    },
+], 2);
+
+const result3 = hasFullHouse([
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: FaceValues.K,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
+        suit: Suits.CLUBS,
+    },
+    {
+        value: 10,
         suit: Suits.CLUBS,
     },
 ]);

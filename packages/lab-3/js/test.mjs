@@ -1,30 +1,58 @@
 // Check for a royal flush
-import { hasRoyalFlush } from "./helper.js";
+import {getAllNOfAKinds, hasRoyalFlush} from "./helper.js";
 import { FaceValues, Suits } from "./types.js";
 
-let test;
-test = hasRoyalFlush([
-    {
-        value: FaceValues.A,
-        suit: Suits.CLUBS,
-    },
-    {
-        value: FaceValues.K,
-        suit: Suits.CLUBS,
-    },
-    {
-        value: FaceValues.Q,
-        suit: Suits.CLUBS,
-    },
-    {
-        value: FaceValues.J,
-        suit: Suits.CLUBS,
-    },
-    {
-        value: FaceValues.T,
-        suit: Suits.CLUBS,
-    },
-]);
+console.log(
+    hasRoyalFlush([
+        {
+            value: FaceValues.A,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.K,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.Q,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.J,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.T,
+            suit: Suits.CLUBS,
+        },
+    ])
+);
+
+console.log(
+    getAllNOfAKinds([
+        {
+            value: FaceValues.Q,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.Q,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.K,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.K,
+            suit: Suits.CLUBS,
+        },
+        {
+            value: FaceValues.K,
+            suit: Suits.CLUBS,
+        },
+    ])
+);
+
+
 console.log('done');
 //
 // // Check for a four of a kind
