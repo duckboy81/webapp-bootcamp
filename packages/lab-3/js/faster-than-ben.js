@@ -1,5 +1,5 @@
 // Import the rawHands
-import rawHands from "./poker.json" assert { type: "json" };
+import rawHands from "../poker.json" assert { type: "json" };
 import { getNumberFromValue, isWinnerPlayerOne } from "./helper.js";
 
 // Break out the rawHands
